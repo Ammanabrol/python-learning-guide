@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Learning Guide - Legal Python Workshop</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+        .nav {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .nav li {
+            margin: 0 1rem;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: #667eea;
+            color: white;
+        }
+        .section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 1rem;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .step {
+            background: #d1ecf1;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #17a2b8;
+            border-radius: 0 5px 5px 0;
+        }
+        .exercise {
+            background: #d4edda;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #28a745;
+            border-radius: 0 5px 5px 0;
+        }
+        .legal-example {
+            background: #f8d7da;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #dc3545;
+            border-radius: 0 5px 5px 0;
+        }
+        .progress-bar {
+            background: #e9ecef;
+            height: 20px;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+        .progress {
+            background: linear-gradient(90deg, #28a745, #20c997);
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+            }
+            .nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐍 Python Learning Guide</h1>
+            <p>Legal Python Workshop - Step-by-Step Learning Path</p>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#basics">Python Basics</a></li>
+                <li><a href="#variables">Variables & Data Types</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#lists">Lists & Dictionaries</a></li>
+                <li><a href="#loops">Loops & Conditions</a></li>
+                <li><a href="#legal">Legal Applications</a></li>
+                <li><a href="#projects">Practice Projects</a></li>
+            </ul>
+        </nav>
+
+        <!-- Progress Tracker -->
+        <div class="section">
+            <h2>📊 Your Learning Progress</h2>
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%" id="progressBar"></div>
+            </div>
+            <p id="progressText">Ready to start your Python journey!</p>
+        </div>
+
+        <!-- Section 1: Python Basics -->
+        <div class="section" id="basics">
+            <h2>🚀 Step 1: Python Basics</h2>
+            
+            <div class="step">
+                <h3>What is Python?</h3>
+                <p>Python is a powerful, easy-to-learn programming language that's perfect for legal professionals who want to automate tasks, analyze data, and create useful tools.</p>
+            </div>
+
+            <div class="step">
+                <h3>Your First Python Program</h3>
+                <p>Let's start with the traditional "Hello, World!" program:</p>
+                <div class="code-block">
+print("Hello, Legal World!")
+print("Welcome to Python programming!")
+                </div>
+            </div>
+
+            <div class="legal-example">
+                <h4>🏛️ Legal Example</h4>
+                <p>Create a simple case greeting:</p>
+                <div class="code-block">
+print("Case Management System")
+print("Today's Date: 2024-01-15")
+print("Welcome, Attorney!")
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h4>✏️ Exercise 1</h4>
+                <p>Try creating your own print statements for a law firm welcome message. Include the firm name, your name, and today's date.</p>
+            </div>
+        </div>
+
+        <!-- Section 2: Variables and Data Types -->
+        <div class="section" id="variables">
+            <h2>📝 Step 2: Variables and Data Types</h2>
+            
+            <div class="step">
+                <h3>What are Variables?</h3>
+                <p>Variables are containers that store data. Think of them as labeled boxes where you can put information.</p>
+                <div class="code-block">
+# Text (String)
+client_name = "John Smith"
+case_type = "Personal Injury"
+
+# Numbers (Integer and Float)
+case_number = 2024001
+settlement_amount = 150000.50
+
+# True/False (Boolean)
+case_active = True
+case_settled = False
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>Data Types in Python</h3>
+                <ul>
+                    <li><strong>String (str):</strong> Text data - "Hello", "Case ABC"</li>
+                    <li><strong>Integer (int):</strong> Whole numbers - 42, 2024</li>
+                    <li><strong>Float:</strong> Decimal numbers - 3.14, 150000.50</li>
+                    <li><strong>Boolean (bool):</strong> True or False</li>
+                </ul>
+            </div>
+
+            <div class="legal-example">
+                <h4>🏛️ Legal Example</h4>
+                <div class="code-block">
+# Client Information
+client_name = "Sarah Johnson"
+client_phone = "555-0123"
+case_value = 75000.00
+is_urgent = True
+attorney_assigned = "Jane Doe"
+
+# Display client info
+print(f"Client: {client_name}")
+print(f"Phone: {client_phone}")
+print(f"Case Value: ${case_value}")
+print(f"Urgent: {is_urgent}")
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h4>✏️ Exercise 2</h4>
+                <p>Create variables for a legal case including: case_name, client_name, filing_date, case_status, and estimated_hours. Then print them out in a formatted way.</p>
+            </div>
+        </div>
+
+        <!-- Section 3: Functions -->
+        <div class="section" id="functions">
+            <h2>⚙️ Step 3: Functions</h2>
+            
+            <div class="step">
+                <h3>What are Functions?</h3>
+                <p>Functions are reusable blocks of code that perform specific tasks. They help organize your code and avoid repetition.</p>
+                <div class="code-block">
+def greet_client(name):
+    """Function to greet a client"""
+    return f"Hello, {name}! Welcome to our law firm."
+
+# Using the function
+message = greet_client("John Smith")
+print(message)
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>Functions with Multiple Parameters</h3>
+                <div class="code-block">
+def calculate_attorney_fees(settlement, percentage):
+    """Calculate attorney fees from settlement"""
+    fee = settlement * (percentage / 100)
+    client_amount = settlement - fee
+    return fee, client_amount
+
+# Using the function
+attorney_fee, client_gets = calculate_attorney_fees(100000, 33.33)
+print(f"Attorney Fee: ${attorney_fee:.2f}")
+print(f"Client Gets: ${client_gets:.2f}")
+                </div>
+            </div>
+
+            <div class="legal-example">
+                <h4>🏛️ Legal Example</h4>
+                <div class="code-block">
+def generate_case_number(year, case_type, sequence):
+    """Generate a formatted case number"""
+    case_types = {
+        "civil": "CV",
+        "criminal": "CR",
+        "family": "FM"
+    }
+    type_code = case_types.get(case_type.lower(), "GN")
+    return f"{year}-{type_code}-{sequence:03d}"
+
+# Generate case numbers
+case1 = generate_case_number(2024, "civil", 1)
+case2 = generate_case_number(2024, "family", 15)
+print(f"Case 1: {case1}")
+print(f"Case 2: {case2}")
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h4>✏️ Exercise 3</h4>
+                <p>Create a function called <code>calculate_billable_hours</code> that takes hours worked and hourly rate as parameters, then returns the total amount to bill.</p>
+            </div>
+        </div>
+
+        <!-- Section 4: Lists and Dictionaries -->
+        <div class="section" id="lists">
+            <h2>📋 Step 4: Lists and Dictionaries</h2>
+            
+            <div class="step">
+                <h3>Lists - Storing Multiple Items</h3>
+                <p>Lists store multiple items in a single variable, like a filing cabinet with multiple folders.</p>
+                <div class="code-block">
+# List of case documents
+documents = ["complaint.pdf", "motion.docx", "evidence.jpg", "contract.pdf"]
+
+# Accessing list items
+first_document = documents[0]  # complaint.pdf
+last_document = documents[-1]  # contract.pdf
+
+# Adding to list
+documents.append("witness_statement.pdf")
+
+# List length
+total_documents = len(documents)
+print(f"Total documents: {total_documents}")
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>Dictionaries - Key-Value Pairs</h3>
+                <p>Dictionaries store data in key-value pairs, like a real dictionary where you look up words (keys) to find definitions (values).</p>
+                <div class="code-block">
+# Client information dictionary
+client = {
+    "name": "John Smith",
+    "phone": "555-0123",
+    "email": "john@email.com",
+    "case_type": "Personal Injury",
+    "status": "Active"
+}
+
+# Accessing dictionary values
+client_name = client["name"]
+client_phone = client["phone"]
+
+# Adding new information
+client["attorney"] = "Jane Doe"
+client["filing_date"] = "2024-01-15"
+
+# Dictionary length
+total_fields = len(client)
+print(f"Client has {total_fields} fields of information")
+                </div>
+            </div>
+
+            <div class="legal-example">
+                <h4>🏛️ Legal Example</h4>
+                <div class="code-block">
+# Law firm case management
+cases = [
+    {
+        "case_id": "2024-CV-001",
+        "client": "ABC Corporation",
+        "attorney": "Jane Smith",
+        "status": "Active",
+        "value": 250000
+    },
+    {
+        "case_id": "2024-PI-002", 
+        "client": "John Doe",
+        "attorney": "Bob Johnson",
+        "status": "Settled",
+        "value": 75000
+    }
+]
+
+# Working with the data
+for case in cases:
+    print(f"Case: {case['case_id']}")
+    print(f"Client: {case['client']}")
+    print(f"Status: {case['status']}")
+    print("---")
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h4>✏️ Exercise 4</h4>
+                <p>Create a dictionary for a legal case with keys: case_name, client_name, attorney, filing_date, and case_value. Then create a list containing 3 such case dictionaries.</p>
+            </div>
+        </div>
+
+        <!-- Section 5: Loops and Conditions -->
+        <div class="section" id="loops">
+            <h2>🔄 Step 5: Loops and Conditions</h2>
+            
+            <div class="step">
+                <h3>If Statements - Making Decisions</h3>
+                <div class="code-block">
+case_value = 100000
+
+if case_value > 50000:
+    print("High-value case - assign senior attorney")
+elif case_value > 10000:
+    print("Medium-value case - assign associate")
+else:
+    print("Low-value case - assign junior attorney")
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>For Loops - Repeating Actions</h3>
+                <div class="code-block">
+# List of billable hours for the week
+daily_hours = [8.5, 7.25, 6.0, 9.5, 4.75]
+
+total_hours = 0
+for hours in daily_hours:
+    total_hours += hours
+    print(f"Day: {hours} hours")
+
+print(f"Total weekly hours: {total_hours}")
+                </div>
+            </div>
+
+            <div class="legal-example">
+                <h4>🏛️ Legal Example</h4>
+                <div class="code-block">
+# Case status checker
+cases = [
+    {"name": "Smith v. Jones", "days_since_filing": 45},
+    {"name": "ABC v. XYZ", "days_since_filing": 120},
+    {"name": "Doe v. Company", "days_since_filing": 30}
+]
+
+print("Case Status Report:")
+for case in cases:
+    case_name = case["name"]
+    days = case["days_since_filing"]
+    
+    if days > 90:
+        status = "URGENT - Review needed"
+    elif days > 60:
+        status = "Follow-up required"
+    else:
+        status = "On track"
+    
+    print(f"{case_name}: {status} ({days} days)")
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h4>✏️ Exercise 5</h4>
+                <p>Create a program that loops through a list of case values and categorizes them as "Small" (under $10,000), "Medium" ($10,000-$100,000), or "Large" (over $100,000).</p>
+            </div>
+        </div>
+
+        <!-- Section 6: Legal Applications -->
+        <div class="section" id="legal">
+            <h2>⚖️ Step 6: Legal Applications</h2>
+            
+            <div class="highlight">
+                <h3>Real-World Legal Programming</h3>
+                <p>Now let's see how Python can solve real legal problems!</p>
+            </div>
+
+            <div class="step">
+                <h3>Document Management System</h3>
+                <div class="code-block">
+class LegalDocument:
+    def __init__(self, name, doc_type, client, date_created):
+        self.name = name
+        self.doc_type = doc_type
+        self.client = client
+        self.date_created = date_created
+        self.status = "Draft"
+    
+    def finalize_document(self):
+        self.status = "Final"
+        print(f"{self.name} has been finalized")
+    
+    def get_info(self):
+        return f"{self.name} ({self.doc_type}) - {self.client} - {self.status}"
+
+# Create documents
+contract = LegalDocument("Service Agreement", "Contract", "ABC Corp", "2024-01-15")
+motion = LegalDocument("Motion to Dismiss", "Motion", "John Smith", "2024-01-16")
+
+print(contract.get_info())
+contract.finalize_document()
+print(contract.get_info())
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>Time Tracking and Billing</h3>
+                <div class="code-block">
+def calculate_legal_bill(time_entries, hourly_rate):
+    """Calculate total legal bill from time entries"""
+    total_time = 0
+    bill_details = []
+    
+    for entry in time_entries:
+        date = entry["date"]
+        hours = entry["hours"]
+        description = entry["description"]
+        amount = hours * hourly_rate
+        
+        total_time += hours
+        bill_details.append({
+            "date": date,
+            "hours": hours,
+            "description": description,
+            "amount": amount
+        })
+    
+    total_amount = total_time * hourly_rate
+    
+    return {
+        "details": bill_details,
+        "total_hours": total_time,
+        "total_amount": total_amount
+    }
+
+# Example usage
+time_entries = [
+    {"date": "2024-01-15", "hours": 3.5, "description": "Client consultation"},
+    {"date": "2024-01-16", "hours": 2.0, "description": "Document review"},
+    {"date": "2024-01-17", "hours": 4.5, "description": "Court preparation"}
+]
+
+bill = calculate_legal_bill(time_entries, 250)
+print(f"Total Hours: {bill['total_hours']}")
+print(f"Total Amount: ${bill['total_amount']:,.2f}")
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 7: Practice Projects -->
+        <div class="section" id="projects">
+            <h2>🎯 Step 7: Practice Projects</h2>
+            
+            <div class="exercise">
+                <h4>Project 1: Simple Case Calculator</h4>
+                <p>Create a calculator that can:</p>
+                <ul>
+                    <li>Calculate attorney fees from settlements</li>
+                    <li>Calculate total billable hours</li>
+                    <li>Determine court filing fees</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h4>Project 2: Client Information Manager</h4>
+                <p>Build a system that can:</p>
+                <ul>
+                    <li>Store client information in dictionaries</li>
+                    <li>Search for clients by name</li>
+                    <li>Generate client reports</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h4>Project 3: Document Tracker</h4>
+                <p>Create a program that:</p>
+                <ul>
+                    <li>Tracks legal documents for each case</li>
+                    <li>Shows document status (draft, review, final)</li>
+                    <li>Calculates days since document creation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="section">
+            <h2>🎉 Congratulations!</h2>
+            <p>You've completed the Python Learning Guide for Legal Professionals. You now have the foundation to:</p>
+            <ul>
+                <li>Write basic Python programs</li>
+                <li>Work with variables and data types</li>
+                <li>Create and use functions</li>
+                <li>Manage data with lists and dictionaries</li>
+                <li>Use loops and conditions for decision making</li>
+                <li>Apply Python to legal scenarios</li>
+            </ul>
+            <div class="highlight">
+                <p><strong>Next Steps:</strong> Practice with the provided exercises, work on the projects, and start thinking about how Python can help automate tasks in your legal practice!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple progress tracking
+        let currentStep = 0;
+        const totalSteps = 7;
+        
+        function updateProgress() {
+            const progress = (currentStep / totalSteps) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('progressText').textContent = 
+                `Step ${currentStep} of ${totalSteps} completed (${Math.round(progress)}%)`;
+        }
+        
+        // Add click handlers to sections
+        document.querySelectorAll('.section').forEach((section, index) => {
+            section.addEventListener('click', () => {
+                currentStep = Math.max(currentStep, index);
+                updateProgress();
+            });
+        });
+        
+        // Initialize
+        updateProgress();
+    </script>
+</body>
+</html>
